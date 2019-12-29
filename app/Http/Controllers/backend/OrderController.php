@@ -8,12 +8,12 @@ use Illuminate\Http\Request;
 class OrderController extends Controller
 {
     function getOrder() {
-        echo 'order';
+        return view('backend.order.order');
     }
     function getDetail() {
-        echo 'detail order';
+        return view('backend.order.detailorder');
     }
     function getProcessed() {
-        echo 'processed';
+        return view('backend.order.processed');
     }
 }

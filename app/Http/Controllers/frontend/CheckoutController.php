@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class CheckoutController extends Controller
 {
     function getCheckout() {
-        echo 'checkout';
+        return view('frontend.checkout.checkout');
     }
     function getComplete() {
-        echo 'complete';
+        return view('frontend.checkout.complete');
     }
 }
