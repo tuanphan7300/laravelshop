@@ -13,6 +13,8 @@
             <div class="panel panel-primary">
                 <div class="panel-heading">Sửa sản phẩm</div>
                 <div class="panel-body">
+                    <form method="post" enctype="multipart/form-data">
+                    @csrf
                     <div class="row" style="margin-bottom:40px">
 
                                 <div class="col-md-8">
@@ -28,14 +30,17 @@
                                     <div class="form-group">
                                         <label>Mã sản phẩm</label>
                                         <input  type="text" name="code" class="form-control" value="SP01">
+                                        {{showErrors($errors,'code')}}
                                     </div>
                                     <div class="form-group">
                                         <label>Tên sản phẩm</label>
                                         <input  type="text" name="name" class="form-control" value="Sản phẩm 1">
+                                        {{showErrors($errors,'name')}}
                                     </div>
                                     <div class="form-group">
                                         <label>Giá sản phẩm (Giá chung)</label>
                                         <input  type="number" name="price" class="form-control" value="150000">
+                                        {{showErrors($errors,'price')}}
                                     </div>
                                     <div class="form-group">
                                         <label>Sản phẩm có nổi bật</label>
@@ -78,6 +83,7 @@
                             </div>
                         </div>
                     <div class="clearfix"></div>
+                </form>
                 </div>
             </div>
 
